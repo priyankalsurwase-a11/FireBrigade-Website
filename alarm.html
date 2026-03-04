@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fire Emergency Alarm</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-family:Arial;
+    background:black;
+    color:white;
+    transition:0.3s;
+}
+
+h1{
+    margin-top:80px;
+    font-size:40px;
+    color:red;
+}
+
+button{
+    padding:20px 40px;
+    font-size:25px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:40px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:darkred;
+    transform:scale(1.1);
+}
+
+.flash{
+    background:red !important;
+}
+
+#message{
+    margin-top:40px;
+    font-size:28px;
+    display:none;
+}
+</style>
+</head>
+
+<body style="background-image:url('alarm.jpg');">
+
+<body>
+
+<a href="tel:7498901667">
+<button style="background:orange;">Call Emergency Number</button>
+</a>
+
+<h1>🚨 Fire Emergency Alarm 🚨</h1>
+
+<button id="alarmBtn" onclick="startAlarm()">Activate Alarm</button>
+
+<br><br>
+
+<a href="https://wa.me/917498901667?text=🚨%20Fire%20Emergency%20Alert%20Activated!" target="_blank">
+<button style="background:green;">Send Alert to My WhatsApp</button>
+</a>
+
+<div id="message">
+🔥 FIRE ALERT ACTIVATED 🔥 <br>
+Call Emergency Number: 101
+</div>
+
+<audio id="alarmSound">
+<source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function startAlarm(){
+    var sound = document.getElementById("alarmSound");
+    sound.play();
+
+    document.getElementById("message").style.display="block";
+
+    setInterval(function(){
+        document.body.classList.toggle("flash");
+    },500);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fire Brigade - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image:url('Fire-Brigadebus.jpg');">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="information.html">Information</a>
+<a href="services.html">Services</a>
+<a href="civilians.html">Civilians Recovered</a>
+<a href="gallery.html">Gallery</a>
+<a href="reviews.html">Reviews</a>
+<a href="about.html">About Us</a>
+<a href="alarm.html">Alarm</a>
+</nav>
+
+<div class="container">
+<h1>Welcome to Fire Brigade Department</h1>
+<p>The Fire Brigade plays a vital role in protecting lives, property, and the environment from fire hazards and emergencies.</p>
+<p>They respond quickly to fire outbreaks, accidents, natural disasters, and rescue operations.</p>
+<button onclick="showMessage('Emergency Contact: 101')">Emergency Number</button>
+</div>
+
+<div class="container">
+<h1>Contact Me</h1>
+
+<form onsubmit="showContactMessage(); return false;">
+    
+    <input type="text" placeholder="Your Name" required><br><br>
+    
+    <input type="email" placeholder="Your Email" required><br><br>
+    
+    <textarea placeholder="Your Message" rows="5" required></textarea><br><br>
+    
+    <button type="submit">Send Message</button>
+
+</form>
+
+<p id="contactResponse" style="display:none; margin-top:20px; font-size:20px; color:lightgreen;">
+Message Sent Successfully ✅
+</p>
+
+</div>
+
+<footer>
+<p>© 2026 Fire Brigade Department</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
